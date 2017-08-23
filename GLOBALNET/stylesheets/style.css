@@ -113,7 +113,7 @@ span.icon2 {
 }
 .sub-main-w3 input[type="submit"] {
     color: white;
-    background: #ea2858;
+    background: #337ab7;
     border: none;
     padding: .7em 0;
     outline: none;
@@ -151,7 +151,7 @@ span.icon2 {
     color: #fff;
 }
 .footer p a:hover {
-    color: #ea2858;
+    color: #59bcd4;
 }
 /*--//footer--*/
 
