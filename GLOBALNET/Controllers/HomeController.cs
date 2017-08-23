@@ -13,5 +13,9 @@ namespace GLOBALNET.Controllers
         {
             return View();
         }
+        public ActionResult Caja()
+        {
+            return View();
+        }
     }
 }
