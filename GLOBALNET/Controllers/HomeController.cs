@@ -17,5 +17,9 @@ namespace GLOBALNET.Controllers
         {
             return View();
         }
+        public ActionResult Admin()
+        {
+            return View();
+        }
     }
 }
