@@ -91,6 +91,14 @@
   <ItemGroup>
     <Content Include="assets\fontawesome\font\fontawesome-webfont.svg" />
     <Content Include="assets\zocial\css\zocial-regular-webfont.svg" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\coreSlider.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jstarbox.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="images\1.jpg" />
     <Content Include="images\404.png" />
@@ -316,8 +324,9 @@
     <Content Include="assets\zocial\css\zocial-regular-webfont.ttf" />
     <Content Include="assets\zocial\css\zocial-regular-webfont.woff" />
     <Content Include="assets\zocial\css\zocial-regular-webfont_2d2816fe.eot" />
-    <Content Include="Views\Home\Caja.cshtml" />
+    <Content Include="Views\Home\Caja1.cshtml" />
     <Content Include="Views\Home\Admin.cshtml" />
+    <None Include="Views\Home\Caja.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

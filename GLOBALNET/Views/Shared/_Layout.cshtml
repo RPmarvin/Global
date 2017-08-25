@@ -4,9 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>GLOBALNET</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="ProteusThemes" />
+
     
     <!-- Twitter Bootstrap -->
     <link href="~/stylesheets/bootstrap.css" rel="stylesheet" />
@@ -34,24 +32,23 @@
                 <!--  = Logo =  -->
                 <!--  ==========  -->
                 <div class="span7">
-                    <a class="brand" href="~/index.html">
+                    <a class="brand">
                         <img src="~/images/logo.png" alt="Webmarket Logo" width="48" height="48" />
-                        <span class="pacifico">Webmarket</span>
-                        <span class="tagline">Really Cool e-Commerce HTML Template</span>
+                        <span class="">GlobalNet Comunicaciones SAC</span>
+                        <span class="tagline">Usuario</span>
                     </a>
                 </div>
 
                 <!--  ==========  -->
-                <!--  = Login/register =  -->
+                <!--  = Salir boton =  -->
                 <!--  ==========  -->
                 <div class="span5">
                     <div class="top-right">                        
-                        <div class="register">
-                            <a href="~/#loginModal" role="button" data-toggle="modal">Login</a> or
-                            <a href="~/#registerModal" role="button" data-toggle="modal">Register</a>
+                        <div class="Salir">
+                            <a href="" role="button" data-toggle="modal">Salir</a>                         
                         </div>
                     </div>
-                </div> <!-- Login/register -->
+                </div> <!-- Salir boton -->
             </div>
         </div>
     </header>
@@ -75,68 +72,15 @@
                         <!--  ==========  -->
                         <div class="nav-collapse collapse">
                             <ul class="nav" id="mainNavigation">
+                                <li><a href="@Url.Action("Caja","Home")">Pagos</a></li>
                                 <li class="dropdown active">
-                                    <a href="~/index.html" class="dropdown-toggle"> Home <b class="caret"></b> </a>
+                                    <a href="~/index.html" class="dropdown-toggle"> Reporte <b class="caret"></b> </a>
                                     <ul class="dropdown-menu">
-                                        <li class="active"><a href="~/index.html">Default Theme</a></li>
-                                        <li><a href="~/index-grass-green.html">Grass Green Theme</a></li>
-                                        <li><a href="~/index-oil-green.html">Oil Green Theme</a></li>
-                                        <li><a href="~/index-gray.html">Gray Theme</a></li>
+                                        <li class="active"><a href="~/index.html">Resumen del día</a></li>
+                                        <li><a href="~/index-grass-green.html">Reporte detallado</a></li>                                        
                                     </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="~/shop.html" class="dropdown-toggle"> Shop <b class="caret"></b> </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="~/shop.html">Default Layout</a></li>
-                                        <li><a href="~/shop-no-sidebar.html">Full Width</a></li>
-                                        <li><a href="~/product.html">Single Product</a></li>
-                                        <li><a href="~/shop-search.html">Search Results</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="~/blog.html" class="dropdown-toggle">Blog <b class="caret"></b> </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="~/blog.html">Default Layout</a></li>
-                                        <li><a href="~/blog-single.html">Single Post</a></li>
-                                        <li><a href="~/blog-search.html">Search Results</a></li>
-                                        <li><a href="~/404.html">404 Page</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="~/features.html" class="dropdown-toggle">Features <b class="caret"></b> </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="~/icons.html">Icons</a></li>
-                                        <li class="dropdown">
-                                            <a href="~/features.html" class="dropdown-toggle"><i class="icon-caret-right pull-right visible-desktop"></i> All Features</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="~/features.html#headings">Headings</a></li>
-                                                <li><a href="~/features.html#alertBoxes">Alert Boxes</a></li>
-                                                <li><a href="~/features.html#tabs">Tabs</a></li>
-                                                <li><a href="~/features.html#buttons">Buttons</a></li>
-                                                <li><a href="~/features.html#toggles">Toggles</a></li>
-                                                <li><a href="~/features.html#quotes">Quotes</a></li>
-                                                <li><a href="~/features.html#gallery">Gallery Grids</a></li>
-                                                <li><a href="~/features.html#code">Code</a></li>
-                                                <li><a href="~/features.html#columns">Columns</a></li>
-                                                <li><a href="~/features.html#maps">Maps</a></li>
-                                                <li><a href="~/features.html#progress">Progress Bars</a></li>
-                                                <li><a href="~/features.html#tables">Tables</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="~/about-us.html">About Us</a></li>
-                                <li><a href="~/contact.html">Contact</a></li>
-                            </ul>
-
-                            <!--  ==========  -->
-                            <!--  = Search form =  -->
-                            <!--  ==========  -->
-                            <form class="navbar-form pull-right" action="#" method="get" />
-                            <button type="submit"><span class="icon-search"></span></button>
-                            <input type="text" class="span1" name="search" id="navSearchInput" />
-                            </form>
+                                </li>    
+                            </ul>                            
                         </div><!-- /.nav-collapse -->
                     </div>
 
