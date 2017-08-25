@@ -89,6 +89,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GlobalNet_Pagos.mdf" />
+    <Content Include="App_Data\GlobalNet_Pagos_log.ldf">
+      <DependentUpon>GlobalNet_Pagos.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\fontawesome\font\fontawesome-webfont.svg" />
     <Content Include="assets\zocial\css\zocial-regular-webfont.svg" />
     <Content Include="css\bootstrap.css" />
@@ -324,7 +328,6 @@
     <Content Include="assets\zocial\css\zocial-regular-webfont.ttf" />
     <Content Include="assets\zocial\css\zocial-regular-webfont.woff" />
     <Content Include="assets\zocial\css\zocial-regular-webfont_2d2816fe.eot" />
-    <Content Include="Views\Home\Caja1.cshtml" />
     <Content Include="Views\Home\Admin.cshtml" />
     <None Include="Views\Home\Caja.cshtml" />
     <None Include="Web.Debug.config">
@@ -335,7 +338,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
