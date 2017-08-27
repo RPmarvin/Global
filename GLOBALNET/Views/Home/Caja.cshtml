@@ -1,86 +1,23 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="ISO-8859-1">
-    <title>DEMO FACTURAS PDF</title>
-    <style>
-        body {
-            font-family: sans-serif, verdana, arial;
-        }
 
-        table tr td:first-child
-        {
-            text-align: right;
-        }
-    </style>
-</head>
 <body>
     <center>
         <h3>GENERAR PAGOS</h3>
-        @*<h4>El script creará la factura para que la guardes en tu PC personal, el script elimina automáticamente la factura, de modo que sólo pueda tener acceso a la misma el administrador.</h4>*@
-
         <form method="post" action="...">
 
             <h3>Los datos de la boleta son los siguientes:</h3>
 
-            <table>
-                <tr>
-                    <td>Numero de factura:</td>
-                    <td><input type="text" name="id_factura" value="1" size="5"></td>
-                </tr>
-                <tr>
-                    <td>Numero de telefono:</td>
-                    <td><input type="text" name="numero_telefono" value="" size="15"></td>
-                </tr>
-                @*<tr>
-                    <td>Nombre del cliente:</td>
-                    <td><input type="text" name="nombre_cliente" value="Nombre del cliente" size="50"></td>
-                </tr>
-                <tr>
-                    <td>fecha emisión de factura:</td>
-                    <td><input type="text" name="fecha_factura" value="string date ( format [timestamp] )" size="15"></td>
-                </tr>
-                <tr>
-                    <td>Nombre de la tienda:</td>
-                    <td><input type="text" name="nombre_tienda" value="Nombre de la tienda S.L" size="50"></td>
-                </tr>
-                <tr>
-                    <td>Dirección de la tienda:</td>
-                    <td><input type="text" name="direccion_tienda" value="C/ demostración nº 1" size="50"></td>
-                </tr>
-                <tr>
-                    <td>Población de la tienda:</td>
-                    <td><input type="text" name="poblacion_tienda" value="Madrid" size="25"></td>
-                </tr>
-                <tr>
-                    <td>Provincia de la tienda:</td>
-                    <td><input type="text" name="provincia_tienda" value="Madrid" size="25"></td>
-                </tr>
-                <tr>
-                    <td>Código Postal de la tienda:</td>
-                    <td><input type="text" name="codigo_postal_tienda" value="28080" size="5"></td>
-                </tr>
-                <tr>
-                    <td>Teléfono de la tienda:</td>
-                    <td><input type="text" name="telefono_tienda" value="900 00 00 00" size="15"></td>
-                </tr>
-                <tr>
-                    <td>Fax de la tienda:</td>
-                    <td><input type="text" name="fax_tienda" value="900 00 00 00" size="15"></td>
-                </tr>
-                <tr>
-                    <td>Identificacion Fiscal de la tienda:</td>
-                    <td><input type="text" name="identificacion_fiscal_tienda" value="11223344N" size="15"></td>
-                </tr>
-                <tr>
-                    <td><hr></td>
-                    <td><hr></td>
-                </tr>*@
-                
-            </table>
 
-            <h3>PRODUCTOS</h3>
-            <table class="table-responsive table-striped table-bordered" cellpadding="5" border="1">
+            <table>
+
+                <tr>
+                    <td>Número:</td>
+                    <td><input type="text" name="nombre_cliente" value="" size="15"></td>
+                    <td><button class="btn btn-buscar" type="submit"><h8>buscar</h8></button></td>
+
+                </tr>
+
                 <tr>
                     <td>Nombre del cliente:</td>
                     <td><input type="text" name="nombre_cliente" value="" size="15"></td>
@@ -88,6 +25,10 @@
                 <tr>
                     <td>Apellidos del cliente:</td>
                     <td><input type="text" name="apellidos_cliente" value="" size="15"></td>
+                </tr>
+                <tr>
+                    <td><hr></td>
+                    <td><hr></td>
                 </tr>
                 <tr>
                     <td>Importe:</td>
@@ -102,6 +43,10 @@
                     <td><input type="text" name="total_pago" value="" size="25"></td>
                 </tr>
                 <tr>
+                    <td><hr></td>
+                    <td><hr></td>
+                </tr>
+                <tr>
                     <td>Depositado:</td>
                     <td><input type="text" name="depositado" value="" size="5"></td>
                 </tr>
@@ -110,12 +55,12 @@
                     <td><input type="text" name="vuelto" value="" size="15"></td>
                 </tr>
             </table>
-            
-            
+
+
             <!-- Campo que hace la llamada al script que genera la factura -->
             <input type="hidden" name="generar_factura" value="true">
         </form>
-        <button  class="btn btn-info" type="submit"><h6>GENERAR BOLETA</h6></button>
+        <button class="btn btn-info" type="submit"><h6>GENERAR BOLETA</h6></button>
         <br><br><br><br>
     </center>
 </body>
