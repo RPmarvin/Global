@@ -21,7 +21,7 @@ namespace GLOBALNET.Controllers
         {
             return View();
         }
-        public ActionResult facturas()
+        public ActionResult ReporteDia()
         {
             return View();
         }

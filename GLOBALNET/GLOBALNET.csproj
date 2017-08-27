@@ -330,6 +330,7 @@
     <Content Include="assets\zocial\css\zocial-regular-webfont_2d2816fe.eot" />
     <Content Include="Views\Home\Admin.cshtml" />
     <None Include="Views\Home\Caja.cshtml" />
+    <Content Include="Views\Home\ReporteDia.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

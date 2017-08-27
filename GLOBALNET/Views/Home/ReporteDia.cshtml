@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<body>
+    <center>
+        <h3>REPORTE DEL DÍA</h3>
+        <form method="post" action="...">
+
+            <?php
+            $hoy = getdate();
+            print_r($hoy);
+            ?>
+
+            <table>
+
+                <tr>
+                    <td>Importe total: S/.</td>
+                    <td><input type="text" name="Importe_total" value="" size="15"></td>                    
+
+                </tr>
+
+                <tr>
+                    <td>comisión total: S/.</td>
+                    <td><input type="text" name="comision_total" value="" size="15"></td>
+                </tr>               
+                <tr>
+                    <td><hr></td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>total: S/.</td>
+                    <td><input type="text" name="importe" value="" size="50"></td>
+                </tr>               
+            </table>
+            <!-- Campo que hace la llamada al script que genera la factura -->
+            <input type="hidden" name="generar_factura" value="true">
+        </form>
+        <button class="btn btn-info" type="submit"><h6>exportar en exel</h6></button>
+        <br><br><br><br>
+    </center>
+</body>
+
+</html>
