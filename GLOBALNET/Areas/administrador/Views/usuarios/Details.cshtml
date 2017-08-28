@@ -1,0 +1,65 @@
+﻿@model GLOBALNET.Models.usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            NOMBRE 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_usuario)
+        </dd>
+
+        <dt>
+            APELLIDOS 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido_usuario)
+        </dd>
+
+        <dt>
+            DNI 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dni_usuario)
+        </dd>
+
+        <dt>
+            CARGO 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo_usuario)
+        </dd>
+
+        <dt>
+            SEDE 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sede_usuario)
+        </dd>
+
+    </dl>
+
+</div>
+<tr>
+    <td><hr></td>
+</tr>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_usuario }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>
+<tr>
+    <td><hr></td>
+</tr>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -100,9 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\GlobalNet_Pagos.mdf" />
-    <Content Include="App_Data\GlobalNet_Pagos_log.ldf">
-      <DependentUpon>GlobalNet_Pagos.mdf</DependentUpon>
+    <Content Include="App_Data\Cajabd.mdf" />
+    <Content Include="App_Data\Cajabd_log.ldf">
+      <DependentUpon>Cajabd.mdf</DependentUpon>
     </Content>
     <Content Include="assets\fontawesome\font\fontawesome-webfont.svg" />
     <Content Include="assets\zocial\css\zocial-regular-webfont.svg" />
@@ -217,7 +217,9 @@
     <Content Include="images\jagged-border-bot_b1ed3c80.png" />
     <Content Include="images\jagged-border-top_b1ed3c80.png" />
     <Content Include="images\logo-bw.png" />
-    <Content Include="images\logo.png" />
+    <Content Include="images\logo_global.png" />
+    <Content Include="images\logo_global_icon.ico" />
+    <Content Include="images\logo_grande.png" />
     <Content Include="images\shelf-ie8_99fd9af7.png" />
     <Content Include="images\shelf_883bf066.png" />
     <Content Include="images\webmarket.png" />
@@ -310,8 +312,35 @@
     <Content Include="js\rs-plugin\js\jquery.themepunch.revolution.min.js" />
     <Content Include="js\rs-plugin\pluginsources\jquery.themepunch.plugins.min.js" />
     <Content Include="js\underscore\underscore-min.js" />
+    <Content Include="Models\ModelCaja.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCaja.edmx</DependentUpon>
+      <LastGenOutput>ModelCaja.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelCaja.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCaja.edmx</DependentUpon>
+      <LastGenOutput>ModelCaja.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\administrador\Views\web.config" />
+    <EntityDeploy Include="Models\ModelCaja.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCaja.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelCaja.edmx.diagram">
+      <DependentUpon>ModelCaja.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\administrador\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\administrador\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\administrador\Views\usuarios\Create.cshtml" />
+    <Content Include="Areas\administrador\Views\usuarios\Delete.cshtml" />
+    <Content Include="Areas\administrador\Views\usuarios\Details.cshtml" />
+    <Content Include="Areas\administrador\Views\usuarios\Edit.cshtml" />
+    <Content Include="Areas\administrador\Views\usuarios\Index.cshtml" />
+    <Content Include="Areas\administrador\Views\usuarios\Huanta.cshtml" />
+    <Content Include="Areas\administrador\Views\usuarios\SanFransisco.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -328,9 +357,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\administrador\administradorAreaRegistration.cs" />
+    <Compile Include="Areas\administrador\Controllers\usuariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\boleta_pago.cs">
+      <DependentUpon>ModelCaja.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cliente.cs">
+      <DependentUpon>ModelCaja.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCaja.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCaja.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCaja.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCaja.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCaja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCaja.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\numero.cs">
+      <DependentUpon>ModelCaja.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tienda.cs">
+      <DependentUpon>ModelCaja.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usuario.cs">
+      <DependentUpon>ModelCaja.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -365,7 +426,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Areas\administrador\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

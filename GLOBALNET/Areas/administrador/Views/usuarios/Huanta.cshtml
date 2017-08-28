@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Huanta";
+}
+
+<center>
+    <h3>REPORTE POR FECHAS</h3>
+
+    <!--  ==========  -->
+    <!--  calendario -->
+    <!--  ==========  -->
+    <div class="container">
+        <div class="table-responsive">
+            <table>
+                <tr>
+                    <td><h4>Fecha Inicial</h4></td>
+                    <td><h4>Fecha Final</h4></td>
+                </tr>
+                <tr>
+                    <td><input type="date">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                    <td><input type="date"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--  ===fin calendario====  -->
+
+    <h2>HUANTA</h2>
+
+    <div class="container">
+        <h2>Reporte Resumido</h2>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>IMPORTE TOTAL:</th>
+                <th>S/. 100.00</th>
+            </tr>
+            <tr>
+                <th>COMISION TOTAL:</th>
+                <th>S/. 5.00</th>
+            </tr>
+            <tr>
+                <th>TOTAL:</th>
+                <th>S/. 105.00</th>
+            </tr>
+        </table>
+
+    </div>
+    <button class="btn btn-primary" type="submit"><h6>IMPRIMIR</h6></button>
+    <button class="btn btn-info" type="submit"><h6>EXPORTAR EN EXEL</h6></button>
+    <br>
+    <div class="container">
+        <h2>Reporte Detallado</h2>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>TRANSACCIÓN</th>
+                    <th>NÚMERO</th>
+                    <th>NOMBRE Y APELLIDO</th>
+                    <th>IMPROTE</th>
+                    <th>COMSIÓN</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20175454</td>
+                    <td>959878545</td>
+                    <td>Marcos Ramos</td>
+                    <td>S/.45</td>
+                    <td>S/.2</td>
+                    <td>S/. 47.00</td>
+                </tr>
+                <tr>
+                    <td>20175476</td>
+                    <td>99945433</td>
+                    <td>Juan Perez</td>
+                    <td>S/.45</td>
+                    <td>S/.2</td>
+                    <td>S/. 47.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-primary" type="submit"><h6>IMPRIMIR</h6></button>
+    <button class="btn btn-info" type="submit"><h6>EXPORTAR EN EXEL</h6></button>
+    <br>
+
+</center>
+

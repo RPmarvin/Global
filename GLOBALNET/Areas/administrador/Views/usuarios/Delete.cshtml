@@ -1,0 +1,66 @@
+﻿@model GLOBALNET.Models.usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ELIMINAR USUARIO</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            NOMBRE 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_usuario)
+        </dd>
+
+        <dt>
+            APELLIDOS 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido_usuario)
+        </dd>
+
+        <dt>
+            DNI 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dni_usuario)
+        </dd>
+
+        <dt>
+            CARGO 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo_usuario)
+        </dd>
+
+        <dt>
+            SEDE 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sede_usuario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="ELIMINAR" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+
+    }
+</div>
+<tr>
+    <td><hr></td>
+</tr>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>

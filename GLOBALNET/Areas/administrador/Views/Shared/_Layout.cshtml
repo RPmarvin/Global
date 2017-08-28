@@ -1,0 +1,111 @@
+﻿<!-- master page del area administrador-->
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>GLOBALNET</title>
+    <link rel="icon" href="~/images/logo_global_icon.ico" />
+    <!-- Twitter Bootstrap -->
+    <link href="~/stylesheets/bootstrap.css" rel="stylesheet" />
+    <link href="~/stylesheets/responsive.css" rel="stylesheet" />
+    <!-- Slider Revolution -->
+    <link rel="stylesheet" href="~/js/rs-plugin/css/settings.css" type="text/css" />
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="~/js/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <!-- PrettyPhoto -->
+    <link rel="stylesheet" href="~/js/prettyphoto/css/prettyPhoto.css" type="text/css" />
+    <!-- main styles -->
+    <link href="~/stylesheets/main.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <!--  ==========  -->
+    <!--  = Header =  -->
+    <!--  ==========  -->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <!--  ==========  -->
+                <!--  = Logo =  -->
+                <!--  ==========  -->
+                <div class="span7">
+                    <a class="brand">
+                        <img src="~/images/logo_grande.png"/>
+                        @*<span style="color:#59bcd4">GlobalNet Comunicaciones SAC</span>*@
+                        <span class="tagline">Administrador</span>
+                    </a>
+                </div>
+                <!--  ==========  -->
+                <!--  = Salir boton =  -->
+                <!--  ==========  -->
+                <div class="span5">
+                    <div class="top-right">
+                        <div class="Salir">
+                            <a href="" role="button" data-toggle="modal">Salir</a>
+                        </div>
+                    </div>
+                </div> <!-- Salir boton -->
+            </div>
+        </div>
+    </header>
+    <!--  ==========  -->
+    <!--  = Main Menu / navbar =  -->
+    <!--  ==========  -->
+    <div class="navbar navbar-static-top" id="stickyNavbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="span9">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--  ==========  -->
+                        <!--  = Menu =  -->
+                        <!--  ==========  -->
+                        <div class="nav-collapse collapse">
+                            <ul class="nav" id="mainNavigation">
+                                <li><a href="@Url.Action("Index","usuarios")">Administrar Usuarios</a></li>
+                                <li class="dropdown active">
+                                    <a class="dropdown-toggle"> Reportes <b class="caret"></b> </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="@Url.Action("Huanta","usuarios")">Huanta</a></li>
+                                        <li><a href="@Url.Action("SanFransisco","usuarios")">San Fransisco</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- /.nav-collapse -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> <!-- /main menu -->
+    <!--  ==========  -->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <!--  ==========  -->
+    <footer style="clear:both">
+        <!--  ==========  -->
+        <!--  = Bottom Footer =  -->
+        <!--  ==========  -->
+        <div class="foot-last">
+            <div class="container">
+                <div class="row">
+                    <div class="span6">
+                        &copy; Copyright 2017 GLOBALNET COMUNICACIONES
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /bottom footer -->
+    </footer> <!-- /footer -->
+    <!--  ==========  -->
+    <!--  = Modal Windows =  -->
+    <!--  ==========  -->
+    <!--  = Login =  -->
+
+</body>
+</html>

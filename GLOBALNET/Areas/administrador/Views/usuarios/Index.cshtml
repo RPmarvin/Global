@@ -1,0 +1,62 @@
+﻿@model IEnumerable<GLOBALNET.Models.usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>USUARIOS</h2>
+
+<p>
+    @Html.ActionLink("Agregar", "Create")
+</p>
+<hr />
+<table class="table table-striped">
+    <tr>
+        <th>
+            NOMBRE
+        </th>
+        <th>
+            APELLIDOS
+        </th>
+        <th>
+            DNI
+        </th>
+        <th>
+            CARGO
+        </th>
+        <th>
+            SEDE
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellido_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargo_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sede_usuario)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_usuario }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.id_usuario }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id_usuario })
+        </td>
+    </tr>
+}
+    
+</table>
+<tr>
+    <td><hr></td>
+</tr>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
