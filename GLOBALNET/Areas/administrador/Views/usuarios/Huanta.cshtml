@@ -43,13 +43,30 @@
                 <th>S/. 105.00</th>
             </tr>
         </table>
-
     </div>
     <button class="btn btn-primary" type="submit"><h6>IMPRIMIR</h6></button>
     <button class="btn btn-info" type="submit"><h6>EXPORTAR EN EXEL</h6></button>
     <br>
+    <tr>
+        <td><hr></td>
+    </tr>
     <div class="container">
         <h2>Reporte Detallado</h2>
+        <!--buscador-->
+        <div class="container">
+            <div class="row">
+                <div class="span12" >
+                    <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                        <div class="input-append span12">
+                            <input type="text" class="search-query mac-style" placeholder="Buscar">
+                            <button type="submit"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <!--fin buscador-->
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
@@ -86,4 +103,5 @@
     <br>
 
 </center>
-
+<link href="~/stylesheets/buscadorStyle.css" rel="stylesheet" />
+<link href="~/stylesheets/bootstrap.css" rel="stylesheet" />

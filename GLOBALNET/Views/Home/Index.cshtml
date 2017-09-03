@@ -28,19 +28,33 @@
             <h1 style="color:#1e6466">GLOBALNET</h1><h1 style="color:#59bcd4">COMUNICACIONES</h1>
         </div>
         <!--//header-->
-        <div class="main-content-agile">
+
+        <!-- Prueba -->
+        <form action="@Url.Action("Caja","Home")" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" id="email-modal" placeholder="Usuario" name="usuario">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password-modal" placeholder="Contraseña" name="clave">
+            </div>
+
+            <p class="text-center">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i>Log in</button>
+            </p>
+        </form>
+        <!-- fin prueba -->
+
+        @*<div class="main-content-agile">
             <div class="sub-main-w3">
                 <div class="wthree-pro">
                     <h2>Iniciar sesión</h2>
                 </div>
-                <form action="#" method="post">
+                <form method="post" action="@Url.Action("Caja","Home")">
                     <div class="pom-agile">
                         <input placeholder="Usuario" name="Name" class="user" type="email" required="">
-                        <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
                     </div>
                     <div class="pom-agile">
                         <input placeholder="Contraseña" name="Password" class="pass" type="password" required="">
-                        <span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
                     </div>
                     <div class="sub-w3l">
                         <div class="right-w3l">
@@ -49,13 +63,15 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div>*@
         <!--//main-->
+    
         <!--footer-->
         <div class="footer">
         </div>
         <!--//footer-->
     </div>
+    <!-- fin main -->
 </body>
 </html>
 
