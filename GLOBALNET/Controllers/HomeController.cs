@@ -16,7 +16,22 @@ namespace GLOBALNET.Controllers
         }
         public ActionResult Caja()
         {
-            return View();
+            if (Helper.SessionHelper.ExistUserInSession())
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            //if (inicioSecion==0)
+            //{
+            //    return View();
+            //}
+            //else
+            //{
+            //    return RedirectToAction("Index", "Home");
+            //}
         }
         public ActionResult Admin()
         {
@@ -33,12 +48,25 @@ namespace GLOBALNET.Controllers
         //metodo para agregar sesiones 
         public ActionResult Login(string usuario, string clave)
         {
-            var u = bd.usuario.FirstOrDefault(x => x.nombre_usuario== usuario && x.dni_usuario== clave);
-            if (u != null)
+            var usuarios = bd.usuario.FirstOrDefault(x => x.nombre_usuario== usuario && x.dni_usuario== clave);
+            var cargo = bd.usuario.FirstOrDefault(x => x.nombre_usuario== usuario && x.dni_usuario== clave && x.cargo_usuario== "Caja");
+            if (usuarios != null)
             {
-                Helper.SessionHelper.AddUserToSession(u.id_usuario.ToString());
+                Helper.SessionHelper.AddUserToSession(usuarios.id_usuario.ToString());
+                if (cargo != null)
+                {
+                    
+                    return RedirectToAction("Caja", "Home");
+                }
+                else
+                {
+                    return RedirectToAction("usuarios", "administrador");
+                }
             }
-            return RedirectToAction("Caja", "Home");
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult Logout()
@@ -47,15 +75,14 @@ namespace GLOBALNET.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-
-        public static string ObtenerNombreUsuario()
-        {
-            using (var b = new Models.CajabdEntities())
-            {
-                return b.usuario.Find(Helper.SessionHelper.GetUser()).nombre_usuario;
-            }
-        }
-
+        //public static string ObtenerNombreUsuario()
+        //{
+        //    using (var b = new Models.CajabdEntities())
+        //    {
+        //        return b.usuario.Find(Helper.SessionHelper.GetUser()).nombre_usuario;
+        //    }
+        //}
+        
 
     }
 }

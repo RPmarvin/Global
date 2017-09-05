@@ -18,6 +18,7 @@ jQuery(document).ready(function($) {
     /**
      * Set the ie10 class to html tag for IE10
      */
+
     if (/*@cc_on!@*/false) {  
         document.documentElement.className+=' ie10';  
     }  

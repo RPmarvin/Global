@@ -18,8 +18,9 @@
     <!-- css files -->
     <link rel="stylesheet" href="~/stylesheets/style.css" type="text/css" media="all" /> <!-- Style-CSS -->
     <link rel="stylesheet" href="~/stylesheets/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+    <script src="~/js/noBack.js"></script>
 </head>
-<body>
+<body onload="nobackbutton();">
     <!-- main -->
     <div class="center-container">
         <!--header-->
@@ -30,7 +31,7 @@
         <!--//header-->
 
         <!-- Prueba -->
-        <form action="@Url.Action("Caja","Home")" method="post">
+        <form action="@Url.Action("Login","Home")" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" id="email-modal" placeholder="Usuario" name="usuario">
             </div>
@@ -72,6 +73,12 @@
         <!--//footer-->
     </div>
     <!-- fin main -->
+    <!-- no regresar atras -->
+    @*<script language="JavaScript">
+        javascript: window.history.forward(1); //Esto es para cuando le pulse al botón de Atrás
+        javascript: window.history.back(-1); //Esto para cuando le pulse al botón de Adelante
+    </script>*@
+
 </body>
 </html>
 
