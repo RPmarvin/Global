@@ -13,7 +13,6 @@ namespace GLOBALNET.Areas.administrador.Controllers
     public class usuariosController : Controller
     {
         private CajabdEntities db = new CajabdEntities();
-
         public ActionResult Huanta()
         {
             return View();
